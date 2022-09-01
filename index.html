@@ -67,7 +67,21 @@
       <section class="hero section">
         <div class="container">
           <h1 class="title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero-bth" type="button">Замовити послугу</button>
+          <button data-modal-open class="hero-bth" type="button">Замовити послугу</button>
+
+           <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+            <svg>
+              <use></use>
+            </svg>    
+              
+              <button data-modal-close> <svg aria-label="іконка закрити" width="18px" height="18px" class="header-icon">
+                <use href="./images/icons.svg#icon-close-black"></use>
+              </svg>    </button>
+              </div>
+              </div>
+
+         
         </div>
       </section>
 
@@ -141,28 +155,43 @@
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="work-list">
             <li class="section-item">
+              <div class="position">
               <img
                 src="./images/box.jpg"
                 alt="веб технології"
                 width="370"
                 loading="lazy"
               />
+              <div class="img-text">
+              <p class="explore-text">Десктопні додатки</p>
+              </div>
+              </div>
             </li>
             <li class="section-item">
+              <div class="position">
               <img
                 src="./images/box2.jpg"
                 alt="адаптація для мобільних пристроїв"
                 width="370"
                 loading="lazy"
               />
+              <div class="img-text">
+               <p class="explore-text">Мобільні додатки</p>
+               </div>
+               </div>
             </li>
             <li class="section-item">
+              <div class="position">
               <img
                 src="./images/box3.jpg"
                 alt="спільне середовище пк та мобільних пристороїв"
                 width="370"
                 loading="lazy"
               />
+              <div class="img-text">
+               <p class="explore-text">Дизайнерські рішення</p>
+               </div>
+               </div>
             </li>
           </ul>
         </div>
@@ -460,5 +489,7 @@
             </div>
           </div>
     </footer>
+    
+    <script src="./js/modal.js"></script>
   </body>
 </html>
