@@ -9,6 +9,7 @@
   --hero-color: #2f303a;
   --team-color: #f5f4fa;
   --color-border: #eeeeee;
+  --o-transition-dur-and-funk: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -79,13 +80,14 @@ img {
 }
 
 .header-nav .link {
-   padding-bottom: 32px;
+  padding-bottom: 32px;
   position: relative;
   color: var(--secondary-text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition: color var(--o-transition-dur-and-funk);
 }
 
 .current::after {
@@ -111,6 +113,7 @@ img {
   font-weight: 700;
   line-height: 1.2;
   text-decoration: none;
+  transition: color var(--o-transition-dur-and-funk);
 }
 
 .accent {
@@ -154,6 +157,7 @@ img {
   text-decoration: none;
   display: flex;
   align-items: center;
+  transition: color var(--o-transition-dur-and-funk);
 }
 
 .header-contacts:hover,
@@ -212,43 +216,12 @@ img {
   border: none;
   height: 50px;
   border-radius: 4px;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--o-transition-dur-and-funk);
 }
 
 .hero-bth:hover,
 .hero-bth:focus {
   background-color: var(--button-color);
-}
-.backdrop.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%px;
-  height: 100%;
-  visibility: visible;
-  background-color: var(--secondary-color);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  opacity: 1;
-}
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-height: 581px;
-  min-width: 521px;
 }
 
 /* about section */
@@ -264,14 +237,8 @@ img {
 
 .about-item::before {
   flex-basis: calc((100% - 90px) / 4);
-  /* display: block;
-  content: "";
-  height: 120px;
-  width: 270px;
-  background-size: contain;
-  background-position: center;
-  background-color: var(--team-color); */
 }
+
 .icon-container {
   background-color: var(--team-color);
   width: 270px;
@@ -280,6 +247,7 @@ img {
   display: flex;
   align-items: center;
 }
+
 .icon-antenna {
   width: 100%;
 }
@@ -335,9 +303,11 @@ img {
   text-align: center;
   margin-bottom: 50px;
 }
+
 .position {
   position: relative;
 }
+
 .img-text {
   width: 100%;
   font-weight: 700;
@@ -357,12 +327,14 @@ img {
 .section-team {
   background-color: var(--team-color);
 }
+
 .team-container {
   padding: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+
 .team-item {
   background-color: var(--secondary-color);
   flex-basis: calc((100% - 90px) / 4);
@@ -395,11 +367,13 @@ img {
   color: var(--text-color);
   margin-bottom: 16px;
 }
+
 .list {
   display: flex;
   justify-content: center;
   column-gap: 10px;
 }
+
 .team-link {
   display: flex;
   align-items: center;
@@ -407,10 +381,8 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  transition-property: background-color;
-  transition-property: var(--secondary-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--o-transition-dur-and-funk),
+    color var(--o-transition-dur-and-funk);
 }
 .team-link:hover,
 .team-link:focus {
@@ -425,9 +397,7 @@ img {
 
 .team-ikon {
   fill: #afb1b8;
-   transition-property: fill: var(--secondary-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--o-transition-dur-and-funk);
 }
 
 /* секція клієнти */
@@ -437,6 +407,7 @@ img {
   justify-content: center;
   column-gap: 30px;
 }
+
 .client-link {
   display: flex;
   align-items: center;
@@ -444,9 +415,9 @@ img {
   margin-bottom: 0;
   width: 100%;
   height: 100%;
-   transition-property: var(--accent-color);
+  transition-property: var(--accent-color);
   transition-duration: 1000ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--o-transition-dur-and-funk);
 }
 
 .client-item {
@@ -455,11 +426,10 @@ img {
   width: 170px;
   height: 92px;
 }
+
 .client-icon {
   fill: #afb1b8;
-  transition-property: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--o-transition-dur-and-funk);
 }
 
 .client-link:hover .client-icon,
@@ -503,6 +473,7 @@ img {
   letter-spacing: 0.03em;
   color: var(--accent-color);
   text-decoration: none;
+  transition: var(--o-transition-dur-and-funk);
 }
 
 .footer-accent {
@@ -539,6 +510,7 @@ img {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+  transition: color var(--o-transition-dur-and-funk);
 }
 
 .location-item {
@@ -549,7 +521,7 @@ img {
   margin-bottom: 9px;
 }
 
-. .footer-contacts:hover,
+.footer-contacts:hover,
 .footer-contacts:focus {
   color: var(--accent-color);
 }
@@ -572,6 +544,8 @@ img {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color var(--o-transition-dur-and-funk),
+    fill var(--o-transition-dur-and-funk);
 }
 
 .footer-link:hover,
@@ -579,10 +553,12 @@ img {
   background-color: var(--accent-color);
   fill: var(--secondary-color);
 }
+
 .footer-icon {
   display: flex;
   fill: var(--secondary-color);
 }
+
 .footer-text {
   text-align: center;
   line-height: 1.14;
@@ -606,7 +582,11 @@ img {
   cursor: pointer;
   border-radius: 4px;
   border: none;
+  transition: background-color var(--o-transition-dur-and-funk),
+    color var(--o-transition-dur-and-funk),
+    box-shadow var(--o-transition-dur-and-funk);
 }
+
 .current-btn {
   background-color: var(--accent-color);
   color: var(--secondary-color);
@@ -632,6 +612,7 @@ img {
   display: block;
   text-decoration: none;
   color: var(--secondary-text-color);
+  transition: box-shadow var(--o-transition-dur-and-funk);
 }
 
 .portfolio-link:hover,
@@ -639,6 +620,7 @@ img {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
@@ -662,4 +644,72 @@ img {
 .portfolio-content {
   border: 1px solid var(--color-border);
   padding: 20px 24px;
+}
+
+.overlay {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  position: absolute;
+  background: rgba(33, 150, 243, 0.9);
+  left: 0;
+  top: 0;
+  color: var(--secondary-color);
+  padding: 63px 24px;
+  height: 100%;
+  transform: translateY(100%);
+  transition: var(--o-transition-dur-and-funk);
+}
+
+.wraper-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-link:hover .overlay,
+.portfolio-link:focus .overlay {
+  transform: translateY(0%);
+}
+
+/* кнопка закрити */
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  transition: opacity 250ms ease, visibility 250ms ease;
+}
+
+.backdrop.is-hidden {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 528px;
+  width: 581px;
+  background-color: rgba(255, 255, 255, 1);
 }
