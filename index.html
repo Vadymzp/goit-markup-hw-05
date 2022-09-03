@@ -67,7 +67,7 @@
       <section class="hero section">
         <div class="container">
           <h1 class="title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero-bth" type="button">Замовити послугу</button>
+          <button  class="hero-bth" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
 
@@ -141,28 +141,43 @@
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="work-list">
             <li class="section-item">
+              <div class="position">
               <img
                 src="./images/box.jpg"
                 alt="веб технології"
                 width="370"
                 loading="lazy"
               />
+              <div class="img-text">
+              <p class="explore-text">Десктопні додатки</p>
+              </div>
+              </div>
             </li>
             <li class="section-item">
+              <div class="position">
               <img
                 src="./images/box2.jpg"
                 alt="адаптація для мобільних пристроїв"
                 width="370"
                 loading="lazy"
               />
+              <div class="img-text">
+               <p class="explore-text">Мобільні додатки</p>
+               </div>
+               </div>
             </li>
             <li class="section-item">
+              <div class="position">
               <img
                 src="./images/box3.jpg"
                 alt="спільне середовище пк та мобільних пристороїв"
                 width="370"
                 loading="lazy"
               />
+              <div class="img-text">
+               <p class="explore-text">Дизайнерські рішення</p>
+               </div>
+               </div>
             </li>
           </ul>
         </div>
@@ -460,5 +475,18 @@
             </div>
           </div>
     </footer>
+
+    <!-- кнопка закрити -->
+    
+           <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button type="button" class="modal-close" data-modal-close> <svg aria-label="іконка закрити" width="18px" height="18px" class="close-icon">
+                <use href="./images/icons.svg#icon-close">
+                </use>
+              </svg>    
+            </button>
+              </div>
+              </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
