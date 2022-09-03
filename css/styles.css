@@ -368,21 +368,21 @@ img {
   column-gap: 30px;
 }
 .client-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   margin-bottom: 0;
   width: 100%;
   height: 100%;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
 }
 
 .client-item {
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
+  
   width: 170px;
   height: 92px;
 }
 .client-icon {
+  display: flex;
   fill: #afb1b8;
 }
 
@@ -391,9 +391,9 @@ img {
   fill: var(--accent-color);
 }
 
-.client-item:hover,
-.client-item:focus {
-  border-color: var(--accent-color);
+.client-link:hover,
+.client-link:focus {
+border-color: var(--accent-color);
 }
 
 /* футер */
