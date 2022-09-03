@@ -415,14 +415,9 @@ img {
   margin-bottom: 0;
   width: 100%;
   height: 100%;
-<<<<<<< HEAD
   border: 1px solid #afb1b8;
   border-radius: 4px;
-=======
-  transition-property: var(--accent-color);
-  transition-duration: 1000ms;
   transition: border-color var(--o-transition-dur-and-funk);
->>>>>>> c69d6507cbaeb75720be8628197b00d70f4662e4
 }
 
 .client-item {
