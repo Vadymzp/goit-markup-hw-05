@@ -410,24 +410,24 @@ img {
 
 .client-link {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin-bottom: 0;
   width: 100%;
   height: 100%;
-  transition-property: var(--accent-color);
-  transition-duration: 1000ms;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
   transition: border-color var(--o-transition-dur-and-funk);
 }
 
 .client-item {
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
+  
   width: 170px;
   height: 92px;
 }
 
 .client-icon {
+  display: flex;
   fill: #afb1b8;
   transition: fill var(--o-transition-dur-and-funk);
 }
@@ -437,9 +437,9 @@ img {
   fill: var(--accent-color);
 }
 
-.client-item:hover,
-.client-item:focus {
-  border-color: var(--accent-color);
+.client-link:hover,
+.client-link:focus {
+border-color: var(--accent-color);
 }
 
 /* футер */
